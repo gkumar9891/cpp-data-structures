@@ -178,12 +178,148 @@ Node* appendLastKNodes(Node* head, int k) {
     return newHead;
 }
 
+/** make circle loop of node **/
+
+void makeCircle(Node* head, int pos) {
+    Node* temp = head;
+    Node* startNode;
+    int count = 1;
+    
+    while(temp->next != NULL) {
+        if(count == pos) {
+            startNode = temp;
+        }
+        
+        temp = temp->next;
+        count++;
+    }
+
+    temp->next = startNode;
+}
+
+int findLength(Node* head) {
+    int count = 1;
+    if(head->next == NULL) {
+       return count;
+    }
+
+    while(head->next != NULL) {
+        count++;
+        head = head->next;
+    }
+
+    return count;
+}
+
+
+/** check for the node is circle present or not **/
+
+int checkForCircle(Node* head) {
+    Node* fastMover = head;
+    Node* slowMover = head;
+
+    while(fastMover != NULL && fastMover->next != NULL) {
+        slowMover = slowMover->next;
+        fastMover = fastMover->next->next;
+
+        if(fastMover == slowMover) {
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
+/** deletion of circle or node **/
+
+void deletionOfCircle(Node* head) {
+    Node* fastMover = head;
+    Node* slowMover = head;
+
+    do {
+         slowMover = slowMover->next;
+        fastMover = fastMover->next->next;
+    } while(fastMover != slowMover); 
+
+    fastMover = head;
+    while(slowMover->next != fastMover->next) {
+        slowMover = slowMover->next;
+        fastMover = fastMover->next;
+    }
+
+    slowMover->next = NULL;
+
+}
+
+/** linked-list intersetction **/
+void makeInterSection(Node* head, Node* head2, int pos) {
+       int lengthOfHead = findLength(head);
+       int lengthOfHead2 = findLength(head2); 
+      
+
+      if(lengthOfHead > lengthOfHead2 && lengthOfHead > pos) {
+           
+
+            while(head2->next != NULL) {
+                head2 = head2->next;
+                
+            }
+
+            int count = 1;
+            while(count != pos) {
+                head = head->next;
+                count++;
+            }
+
+            head2->next = head;
+       }      
+}
+
+
+/** detection of intersection **/
+
+int detectionOfIntersection(Node* head, Node* head2 ) {
+        int lengthOfHead = findLength(head);
+        int lengthOfHead2 = findLength(head2);
+
+        Node* ptr1;
+        Node* ptr2;
+        int difference;
+
+        if(lengthOfHead > lengthOfHead2) {
+            ptr1 = head;
+            ptr2 = head2;
+            difference = lengthOfHead - lengthOfHead2;
+        } else {
+            ptr1 = head2;
+            ptr2 = head;
+            difference = lengthOfHead2 - lengthOfHead;
+        }
+        
+        while(difference != 0) {
+                ptr1 = ptr1->next;
+                difference--;
+        }
+
+        while(ptr1 != ptr2) {
+                if(ptr1->next ==  NULL) {
+                return -1;
+                }
+                ptr1 = ptr1->next;
+                ptr2 = ptr2->next;
+        }
+
+        return (ptr1->next->data);
+ }
+
+
 
 /** main function **/
 
 int main() {
 
     Node* head = NULL;
+    Node* head2 = NULL;
     
     insertAtEnd(head, 5);
     insertAtEnd(head, 7);
@@ -192,9 +328,9 @@ int main() {
     insertAtEnd(head, 12);
     insertionAfterNode(head, 100, 2);
     insertAtEnd(head, 9);
-    insertAtEnd(head, 4);
+    // insertAtEnd(head, 4);
     insertionAfterNode(head, 50, 9);
-    // deletionOfNode(head, 8)  ;
+    deletionOfNode(head, 8)  ;
     // Display(head);
 
     // head = reversalOfList(head);
@@ -204,10 +340,26 @@ int main() {
     // deletionAtHead(head);
 
     // head = appendLastKNodes(head, 7);
+    // makeCircle(head, 4);
+    // // cout << checkForCircle(head);
     
-    Display(head);
+    // deletionOfCircle(head);
 
-   // cout<< Search(head, 10);
+     insertAtEnd(head2, 90);
+     insertAtEnd(head2, 100);
+     insertAtEnd(head2, 80);
+
+    //  Display(head2);
+
+    //  makeInterSection(head, head2, 4);
+
+     Display(head);
+     cout << endl;
+     Display(head2);
+
+    int intersectionResult = detectionOfIntersection(head, head2);
+    cout << intersectionResult;
+  // cout<< Search(head, 10);
 
     return 0;
 }

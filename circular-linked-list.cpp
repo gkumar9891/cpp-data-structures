@@ -11,6 +11,8 @@ class Node{
     }
 };
 
+/** insertion at head **/
+
 void insertionAtHead(Node* &head, int data) {
     Node* n = new Node(data);
     if(head == NULL) {
@@ -28,6 +30,8 @@ void insertionAtHead(Node* &head, int data) {
     head = n;
     temp->next = head;
 }
+
+/** insertion at tail **/
 
 void insertionAtTail(Node* head, int data) {
     Node* n = new Node(data);
@@ -48,6 +52,8 @@ void insertionAtTail(Node* head, int data) {
     n->next = head;
 }
 
+/** deletion at head **/
+
 void deletionAtHead(Node* &head) {
 
         Node* temp = head;
@@ -63,6 +69,8 @@ void deletionAtHead(Node* &head) {
         delete(todelete);
 }
 
+/** deletion at tail **/
+
 void deletionAtTail(Node* &head) {
     Node* temp = head;
     while(temp->next->next != head) {
@@ -76,6 +84,8 @@ void deletionAtTail(Node* &head) {
 
 }
 
+/** display / traversal **/
+
 void Display(Node* head) {
     Node* temp = head;
 
@@ -85,6 +95,9 @@ void Display(Node* head) {
     }while(temp != head);
 
 }
+
+
+/** main function **/
 
 int main() {
 

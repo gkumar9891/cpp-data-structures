@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+/** doubly linked list structure **/
+
 class Node{
     public:
     int data;
@@ -11,6 +13,8 @@ class Node{
         data = data2;
     }
 };
+
+/** insertion at end **/
 
 void insertionAtEnd(Node* &head, int data) {
     Node* n = new Node(data);
@@ -30,6 +34,8 @@ void insertionAtEnd(Node* &head, int data) {
     temp->next->prev = temp; 
 }
 
+/** insertion at head **/
+
 void insertionAtHead(Node* &head, int data){
     Node* n = new Node(data);
     n->next = head;
@@ -39,6 +45,8 @@ void insertionAtHead(Node* &head, int data){
     head = n;
 }
 
+/** display or traversal  **/
+
 void Display(Node* head) {
     while(head !=  NULL) {
         cout << head->data << " ";
@@ -46,10 +54,14 @@ void Display(Node* head) {
     }
 }
 
+/** deletion at head **/
+
 void deletionAtHead(Node* &head) {
      head = head->next;
      head->prev = NULL;
 }
+
+/** insertion of a particular node **/
 
 void deletionOfNode(Node* &head, int key){
     Node* temp = head;
@@ -72,6 +84,9 @@ void deletionOfNode(Node* &head, int key){
 
     delete temp;
 }
+
+
+/** main function **/
 
 int main() {
 

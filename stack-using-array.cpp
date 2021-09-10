@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
+/** struction of stack using array **/
 
-class Stack{
+class Stack {
     
    public:
 
@@ -13,6 +14,8 @@ class Stack{
         arr = new int[n];
     };
 
+    /** push in stack **/
+
     void push(int data) {
         if(top == n - 1){
             cout << "stack overflow";
@@ -22,6 +25,8 @@ class Stack{
         arr[top] = data;
     }
 
+    /** pop in stack **/
+
     void pop() {
         if(top == -1) {
             cout << "there is no element in stack" << endl;
@@ -29,6 +34,8 @@ class Stack{
         }
         top--;
     }
+
+    /** display the top / head node **/
 
     void Top() {
         if(top == -1){
@@ -38,10 +45,13 @@ class Stack{
         cout<<arr[top];
     }
 
+    /** check stack for empty **/
     bool empty() {
         return top == -1;       
     }
 };
+
+/** main function **/
 
 int main() {
     Stack disk;

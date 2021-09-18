@@ -312,6 +312,66 @@ int detectionOfIntersection(Node* head, Node* head2 ) {
         return (ptr1->next->data);
  }
 
+//funciton for adding sorted list from two sorted linkded list 
+
+Node* mergeTwoList(Node* &head, Node* &head2) {
+    Node* ptr1 = head;
+    Node* ptr2 = head2;
+    Node* dummyNode = new Node(-1);
+    Node* ptr3 = dummyNode;
+
+    while(ptr1 != NULL && ptr2 !=  NULL) {
+        if(ptr1->data > ptr2->data) {
+            ptr3->next = ptr2;
+            ptr2 = ptr2->next; 
+        } else {
+            ptr3->next = ptr1;
+            ptr1 = ptr1->next;
+        }
+        ptr3 = ptr3->next;
+    }
+
+    while(ptr1 != NULL) {
+        ptr3->next = ptr1;
+        ptr1 = ptr1->next;
+        ptr3 = ptr3->next;
+    }
+
+    while(ptr2 != NULL) {
+        ptr3->next = ptr2;
+        ptr2 = ptr2->next;
+        ptr3 = ptr3->next;
+    }
+    
+    return dummyNode->next;
+
+}
+
+
+// function for adding odd position first and than even like 1 2 3 4 5 6 -> 1 3 5 2 4 6
+
+void oddEvenPosition(Node* &head) {
+
+    Node* odd = head;
+    Node* even = odd->next;
+    Node* evenPoint = odd->next;
+
+    while(odd->next != NULL && even->next != NULL) {
+        odd->next = even->next;
+        odd = odd->next;
+
+        if(odd->next != NULL){
+        even->next = odd->next;
+        even = even->next;
+        } else {
+            even->next = NULL;
+        }
+    }
+
+    odd->next = evenPoint;
+
+}
+
 
 
 /** main function **/
@@ -321,16 +381,16 @@ int main() {
     Node* head = NULL;
     Node* head2 = NULL;
     
-    insertAtEnd(head, 5);
-    insertAtEnd(head, 7);
-    insertionInBegining(head, 2);
-    insertAtEnd(head, 8);
-    insertAtEnd(head, 12);
-    insertionAfterNode(head, 100, 2);
-    insertAtEnd(head, 9);
+    // insertAtEnd(head, 5);
+    // insertAtEnd(head, 7);
+    // insertionInBegining(head, 2);
+    // insertAtEnd(head, 8);
+    // insertAtEnd(head, 12);
+    // insertionAfterNode(head, 100, 2);
+    // insertAtEnd(head, 9);
     // insertAtEnd(head, 4);
-    insertionAfterNode(head, 50, 9);
-    deletionOfNode(head, 8)  ;
+    // insertionAfterNode(head, 50, 9);
+    // deletionOfNode(head, 8)  ;
     // Display(head);
 
     // head = reversalOfList(head);
@@ -345,21 +405,49 @@ int main() {
     
     // deletionOfCircle(head);
 
-     insertAtEnd(head2, 90);
-     insertAtEnd(head2, 100);
-     insertAtEnd(head2, 80);
+    //  insertAtEnd(head2, 90);
+    //  insertAtEnd(head2, 100);
+    //  insertAtEnd(head2, 80);
 
     //  Display(head2);
 
     //  makeInterSection(head, head2, 4);
 
-     Display(head);
-     cout << endl;
-     Display(head2);
+    //  Display(head);
+    //  cout << endl;
+    //  Display(head2);
 
-    int intersectionResult = detectionOfIntersection(head, head2);
-    cout << intersectionResult;
+    // int intersectionResult = detectionOfIntersection(head, head2);
+    // cout << intersectionResult;
   // cout<< Search(head, 10);
+
+  insertAtEnd(head, 5);  //1
+  insertAtEnd(head, 14); //2
+  insertAtEnd(head, 15); //3
+  insertAtEnd(head, 16); //4
+  insertAtEnd(head, 17); //5
+  insertAtEnd(head, 18); //6
+  insertAtEnd(head, 19); //7
+
+
+  oddEvenPosition(head);
+  Display(head);
+
+
+
+//   insertAtEnd(head2, 4);
+//   insertAtEnd(head2, 7);
+//   insertAtEnd(head2, 10);
+
+
+
+//   Display(head);
+//   cout<<endl;
+//   Display(head2);
+  
+//   Node* head3 = mergeTwoList(head, head2);
+//   cout<<endl;
+//   Display(head3);
 
     return 0;
 }

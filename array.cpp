@@ -20,14 +20,22 @@ void reversal(int* arr, int h){
 }
 
 int main() {
-    int 8;
+    //** memory in stack
+    int a = 8;
+    int arry[] = {1, 2, 3, 4, 5, 6, 7, 8};
+    int* arr =  &arry[0];
+
+
+    //memory in heap
+
+    // int a;
     // cin>>a;
-    int arr[] = {{6676} 3216 4063 8373 423 586 8850 6762}}
-    int *arr = new int[a];
+    // int *arr = new int[a];
     
     // for(int i = 0; i < a; i++) {
     //     cin >> *(arr + i);
     // }
+
 
     reversal(arr, a);
 

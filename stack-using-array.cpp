@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#define n 5
 
 /** struction of stack using array **/
 
@@ -57,6 +58,8 @@ int main() {
     Stack disk;
     disk.push(5);
     disk.push(10);
+    disk.push(20);
+    disk.push(30);
     cout << disk.empty();
     disk.Top();
     return 0;

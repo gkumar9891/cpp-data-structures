@@ -65,6 +65,6 @@ int main() {
     q.pop();
     q.pop();
     q.peek();
-    q.empty();
+    q.empty();  
     return 0;
 }

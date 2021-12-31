@@ -1,5 +1,7 @@
 //macros are used to increase efficiency of program
 // to increase efficiency it simply replace the defined code using "#define name val " and replace name with value 
+//https://geeksforgeeks.org/macros-and-its-types-in-cpp
+
 
 #include <iostream>
 
@@ -17,4 +19,8 @@ int main() {
 
     return 0;
 }
+
+
+
+
 

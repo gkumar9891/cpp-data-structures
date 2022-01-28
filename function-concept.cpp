@@ -23,7 +23,6 @@ int sum(int a, int b) {
 
 
 int main() {
-
     // int sumVal = sum(3, 5);
     int sumVal = sum(3, 5, 7);
 

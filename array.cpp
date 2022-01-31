@@ -16,35 +16,14 @@
 //     }
 // }
 
-// #include <stdio.h>
-// int main()
-// {
-//     int arr[] = {1, 2, 3, 4, 5};
-//     int *p = arr;
-//     ++*p;
-//     p += 2;
-//     printf("%d \n", *p);
-//     printf("%d", arr[1]);
-//     return 0;
-// }
-
-
-#include <iostream>
-using namespace std;
-
-int fun();
-
-int fun() {
-    int b[2] = {1,2};
-    return b;
-}
-int main() {
-
-    int b[2] = fun();
-
-    cout << b[0]; 
- 
+#include <stdio.h>
+int main()
+{
+    int arr[] = {1, 2, 3, 4, 5};
+    int *p = arr;
+    ++*p;
+    p += 2;
+    printf("%d \n", *p);
+    printf("%d", arr[1]);
     return 0;
 }
-
-

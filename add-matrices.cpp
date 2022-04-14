@@ -52,7 +52,7 @@ int main() {
 
     int (*c)[3] = matrixAdder((int*)a, (int*)b, 3);
 
-     matrixTraverser((int*)c, 3);
+    matrixTraverser((int*)c, 3);
 
     return 0;
 }

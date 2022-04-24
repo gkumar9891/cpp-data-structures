@@ -20,6 +20,5 @@ int main() {
 
     showPermutation("ABCDEFGHI", "");
 
-
     return 0;
 }

@@ -30,9 +30,8 @@ class Graph{
         for(int i = 0; i < edges; i++) {
             cout << "enter the first node and second node" << endl;
             int first,second;
-            linkedList *t;
             cin >> first >> second;
-            t = &adj[first];
+            linkedList *t = &adj[first];
 
             while(t->next != &adj[first]){
                 t = t->next;

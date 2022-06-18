@@ -79,14 +79,61 @@ node *insert(node* root, int key) {
             return rightRotation(root);
         }
 
+        if(balance < -1 && key > root->right->key) {
+            return leftRotate(root);
+        }
+
         if(balance > 1 && key > root->left->key) {
            root->left = leftRotate(root->left);
            return rightRotation(root);
         }
 
-
+         if(balance < -1 && key < root->right->key) {
+            root->right = rightRotation(root->right);
+            return leftRotate(root);
+        }
 
         return root;
+}
+
+node* inorderSuccessor(node* root) {
+    node* current = root;
+    while(current && current->left != NULL) {
+        current = current->left;
+    }
+
+    return current;
+
+}
+
+node* deleteNode(node* root, int key) {
+    if(root == NULL) {
+        return NULL;
+    } 
+
+    if(key < root->key) {
+        root->left = deleteNode(root->left, key);
+    }
+    else if(key > root->key) {
+        root->right = deleteNode(root->right, key);
+    } else {
+        if(root->right == NULL) {
+           node* temp = root->left;
+           free(root);
+           return temp;
+        } else if(root->left == NULL) {
+            node* temp = root->right;
+           free(root);
+           return temp;            
+        } else {
+            node* temp = inorderSuccessor(root->right);
+            root->key = temp->key;
+            temp->key = key;
+            root->right = deleteNode(root->right, key);
+        }
+    }
+
+    return root;
 }
 
 void preorder(node* root) {
@@ -107,6 +154,15 @@ int main() {
     root = insert(root, 20);
     root = insert(root, 10);
     root = insert(root, 15);
+    root = insert(root, 25);
+    root = insert(root, 12);
+    root = insert(root, 30);
+
+    preorder(root);
+    cout << endl;
+
+    deleteNode(root, 15);
+
     preorder(root);
 
     return 0;

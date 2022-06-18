@@ -40,7 +40,6 @@ node* deleteNode(node* root, int key) {
     else if(key > root->data) {
         root->right = deleteNode(root->right, key);
     } 
-    
     else {
         if(root->left == NULL ){
             node* temp = root->right;

@@ -42,7 +42,7 @@
 // 		for (int i = 0; i < x; i++)
 // 			cout << "Thread using lambda"
 // 			" expression as callable\n";
-// 	};
+// 	 };
 
 // 	// This thread is launched by using
 // 	// lamda expression as callable

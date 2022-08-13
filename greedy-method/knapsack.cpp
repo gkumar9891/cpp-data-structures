@@ -50,7 +50,7 @@ void knapsack1_0(int knapsack, int weight[], int value[], int size) {
 int main() {
 
     int k = 10;
-    int w[4] = {1, 3, 4, 6};
+    int w[4] = {1, 3, 4, 6};  
     int v[4] = {20, 30, 10, 50};
 
     knapsack1_0(k, w, v, 4);

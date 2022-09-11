@@ -101,7 +101,6 @@ int main() {
     adj[6].push_back(7);
 
     vector<bool> visited(V, false);
-   
 
     findSCC(adj, visited);
 

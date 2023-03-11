@@ -6,3 +6,9 @@ https://www.hackerrank.com/challenges/special-palindrome-again/problema0
 https://www.hackerrank.com/challenges/common-child/problem
 https://www.hackerrank.com/challenges/max-array-sum/
 https://www.hackerrank.com/challenges/abbr/problem
+https://www.hackerrank.com/challenges/swap-nodes-algo/
+https://www.hackerrank.com/challenges/minimum-time-required/
+https://www.hackerrank.com/challenges/maximum-subarray-sum/
+https://www.hackerrank.com/challenges/largest-rectangle/
+https://www.hackerrank.com/challenges/castle-on-the-grid/
+https://www.hackerrank.com/challenges/poisonous-plants/problem

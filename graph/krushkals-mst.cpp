@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <debug/vector>
 using namespace std;
 
 void makeSet(vector<int> &parent, vector<int> &rank, int vertex) {

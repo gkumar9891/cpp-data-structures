@@ -14,3 +14,5 @@ https://www.hackerrank.com/challenges/castle-on-the-grid/
 https://www.hackerrank.com/challenges/poisonous-plants/problem
 https://www.hackerrank.com/challenges/matrix
 encoding and decoding using huffman technique
+https://www.hackerrank.com/challenges/balanced-forest/problem
+https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/

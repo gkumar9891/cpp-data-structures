@@ -1,6 +1,5 @@
-#include <iostream>
-#include <vector>
-#include <debug/vector>
+#include<bits/stdc++.h>
+#include "../debug.h"
 using namespace std;
 
 void makeSet(vector<int> &parent, vector<int> &rank, int vertex) {
@@ -66,7 +65,7 @@ int main() {
     int vertex = 7;
     vector<int>parent(vertex);
     vector<int>rank(vertex);
-    
+
     makeSet(parent, rank, vertex);
     
     vector< vector<int> > graph {
@@ -82,7 +81,6 @@ int main() {
     };
 
     sortGraph(graph);
-
 
     krushkal(parent, rank, graph);
 

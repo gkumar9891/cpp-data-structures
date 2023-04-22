@@ -17,3 +17,5 @@ encoding and decoding using huffman technique
 https://www.hackerrank.com/challenges/balanced-forest/problem
 https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/
 https://www.hackerrank.com/challenges/crossword-puzzle/problem
+https://www.hackerrank.com/challenges/flipping-bits/problem
+https://www.hackerrank.com/challenges/friend-circle-queries/

@@ -19,3 +19,9 @@ https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-
 https://www.hackerrank.com/challenges/crossword-puzzle/problem
 https://www.hackerrank.com/challenges/flipping-bits/problem
 https://www.hackerrank.com/challenges/friend-circle-queries/
+https://practice.geeksforgeeks.org/problems/079dee7e7db7a784ed73f604e3cf1712432edf79/1
+https://practice.geeksforgeeks.org/problems/df12afc57250e7f6fc101aa9c272343184fe9859/1
+https://practice.geeksforgeeks.org/problems/84963d7b5b84aa24f7807d86e672d0f97f41a4b5/1
+https://practice.geeksforgeeks.org/problems/2a1c11024ceae36363fc405e07f2fa3e2f896ef0/1
+https://practice.geeksforgeeks.org/problems/4db2fcd97400456c4914d5a3e8ad932cc21e3e9d/1
+https://practice.geeksforgeeks.org/problems/00ae30d0e0f6d8877c68f8b8558c5b0138fdb4b7/1

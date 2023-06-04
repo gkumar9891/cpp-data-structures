@@ -28,3 +28,4 @@ https://practice.geeksforgeeks.org/problems/00ae30d0e0f6d8877c68f8b8558c5b0138fd
 https://practice.geeksforgeeks.org/problems/find-k-th-smallest-element-in-given-n-ranges/1
 https://practice.geeksforgeeks.org/problems/modify-linked-list-1-0546/1
 https://practice.geeksforgeeks.org/problems/find-maximum-equal-sum-of-three-stacks/1
+https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-105/problems/   minimum-thorns

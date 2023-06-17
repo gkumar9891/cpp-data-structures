@@ -29,3 +29,6 @@ https://practice.geeksforgeeks.org/problems/find-k-th-smallest-element-in-given-
 https://practice.geeksforgeeks.org/problems/modify-linked-list-1-0546/1
 https://practice.geeksforgeeks.org/problems/find-maximum-equal-sum-of-three-stacks/1
 https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-105/problems/   minimum-thorns
+https://practice.geeksforgeeks.org/problems/rod-cutting0840/1
+https://practice.geeksforgeeks.org/problems/95bb244da24edd6214086ff934886ccda6ed9da8/1
+https://leetcode.com/problems/is-subsequence/

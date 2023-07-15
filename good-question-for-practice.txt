@@ -32,3 +32,9 @@ https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-105/problem
 https://practice.geeksforgeeks.org/problems/rod-cutting0840/1
 https://practice.geeksforgeeks.org/problems/95bb244da24edd6214086ff934886ccda6ed9da8/1
 https://leetcode.com/problems/is-subsequence/
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+https://practice.geeksforgeeks.org/problems/task-scheduler/1
+https://leetcode.com/problems/all-possible-full-binary-trees/
+https://practice.geeksforgeeks.org/problems/unique-rows-in-boolean-matrix/1
+https://leetcode.com/problems/tallest-billboard/editorial/
+https://practice.geeksforgeeks.org/problems/is-binary-number-multiple-of-30654/1

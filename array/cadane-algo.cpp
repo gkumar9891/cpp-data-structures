@@ -11,11 +11,15 @@ int cadaneAlgo(int arr[], int n) {
         sum += arr[i];
 
         // maxi = max(maxi, sum);
+        //equivalent to above commented code done that so that we can also get the range         
         if(sum > maxi) {
             maxi = sum;
             r = i;
         }
 
+        // sum = sum < 0 ? 0 : sum;
+
+        // done arr[i] so that alog can used for -ve values also
         if(sum < arr[i]) {
             sum = arr[i];
             l = i;

@@ -11,7 +11,7 @@ int allSubsets(vector<int> &arr, int index, int sumSubset1, int sumSubset2) {
 
     if(dp[index][abs(sumSubset1 - sumSubset2)] != -1) {
         return dp[index][abs(sumSubset1 - sumSubset2)];
-    }
+    }  
 
     return dp[index][abs(sumSubset1 - sumSubset2)] = 
     min(

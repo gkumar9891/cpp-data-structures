@@ -16,11 +16,9 @@ void bellmanFord( vector<Edge> &edges ) {
 
     vector<int> parent(V);
     vector<int> cost(V, INT_MAX);
-    vector<int> values(V, INT_MAX);
 
     parent[0] = -1;
     cost[0] = 0;
-    values[0] = 0;
 
     bool isUpdated;
 
@@ -32,10 +30,9 @@ void bellmanFord( vector<Edge> &edges ) {
             int destination = edges[j].destination;
             int weight = edges[j].weight; 
 
-            if(cost[source] + weight < cost[destination]) {
+            if(cost[source] != INT_MAX && cost[source] + weight < cost[destination]) {
                 cost[destination] = cost[source] + weight;
                 parent[destination] = source;
-                values[destination] = cost[destination];
                 isUpdated = true;
             }
         }
@@ -51,7 +48,9 @@ void bellmanFord( vector<Edge> &edges ) {
             int destination = edges[j].destination;
             int weight = edges[j].weight; 
 
-            if(cost[source] + weight < cost[destination]) {
+            //if cost of source is infinite and weigjt is -7 then below condition will always true to prevent this we
+            // added cost[source] != INT_MAX;
+            if(cost[source] != INT_MAX && cost[source] + weight < cost[destination]) {
                 cout << "-ve cycle exist" << endl;
                 return;
             }

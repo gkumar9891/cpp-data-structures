@@ -4,7 +4,17 @@
         "thread": "cpp",
         "new": "cpp",
         "string": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "vector": "cpp",
+        "xlocale": "cpp",
+        "xstring": "cpp",
+        "map": "cpp",
+        "stack": "cpp",
+        "deque": "cpp",
+        "format": "cpp",
+        "list": "cpp",
+        "queue": "cpp",
+        "unordered_map": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

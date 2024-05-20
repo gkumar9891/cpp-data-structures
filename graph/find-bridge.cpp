@@ -2,9 +2,7 @@
 #include <vector>
 #include <unordered_map>
 using namespace std;
-// #define V 5
-#define V 3
-
+#define V 5
 
 void DFS( unordered_map<int, vector<int>> &adj, int u, vector <int> &disc, vector <int> &low, vector <int> &parent, vector < pair<int, int> > &bridge ) {
 	static int time  = 0;
@@ -23,14 +21,9 @@ void DFS( unordered_map<int, vector<int>> &adj, int u, vector <int> &disc, vecto
 			}
 		
 		} else if ( v != parent[u] ) {
-			low[u] = min(low[u], disc[v]);
+			low[u] = min(low[u], low[v]);
 		}	
 	}
-
-	
-	
-
-
 }
 
 void findBridge(unordered_map<int, vector<int>> &adj, vector <int> &disc, vector <int> &low, vector <int> &parent) {
@@ -66,7 +59,8 @@ int main() {
 	adj[1].push_back(2);
 	adj[2].push_back(1);
 	adj[2].push_back(0);
-
+	adj[0].push_back(3);
+	adj[3].push_back(4);
 
 	vector <int> disc(V, -1);
 	vector <int> low(V, -1);

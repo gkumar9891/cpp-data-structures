@@ -21,7 +21,7 @@ void DFS( unordered_map<int, vector<int>> &adj, int u, vector <int> &disc, vecto
 			}
 		
 		} else if ( v != parent[u] ) {
-			low[u] = min(low[u], low[v]);
+			low[u] = min(low[u], disc[v]);
 		}	
 	}
 }

@@ -10,8 +10,10 @@ void DFS(unordered_map <int, vector<int>> &adj, int u, vector<int> &disc, vector
     disc[u] = low[u] = time;
     time++;
 
+    int child = 0;
     for(int v: adj[u]) {
         if(disc[v] == -1) {
+            child++;
             parent[v] = u;
             DFS(adj, v, disc, low, parent, articulationPoints);
 
@@ -23,7 +25,10 @@ void DFS(unordered_map <int, vector<int>> &adj, int u, vector<int> &disc, vector
         } else if(v != parent[u]) {
             low[u] = min(low[u], disc[v]);
         }
+    }
 
+    if(child > 1 && parent[u] == -1) {
+         articulationPoints.push_back(u);
     }
 }
 
@@ -37,10 +42,6 @@ void findArticulation( unordered_map <int, vector<int>> &adj ) {
     for(int i = 0; i < V; i++) {
         if(disc[i] == -1) {
             DFS(adj, i, disc, low, parent, articulationPoints);
-        }
-
-        if(parent[i] == -1 && adj[i].size() > 1) {
-            articulationPoints.push_back(i);
         }
     }
 

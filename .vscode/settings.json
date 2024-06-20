@@ -19,7 +19,10 @@
         "algorithm": "cpp",
         "chrono": "cpp",
         "limits": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "iomanip": "cpp",
+        "iosfwd": "cpp",
+        "cstdlib": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

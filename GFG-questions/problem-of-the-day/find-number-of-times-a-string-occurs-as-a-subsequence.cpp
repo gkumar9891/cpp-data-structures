@@ -32,11 +32,6 @@ int countWays(string s1, string s2) {
     return knapsack(s1, s2, s1.length()-1, s2.length()-1);
 }
 
-int countWays(string s1, string s2) {
-    dp = vector<vector<int>>(s1.length()+1, vector<int>(s2.length()+1, -1));
-    return knapsack(s1, s2, s1.length()-1, s2.length()-1);
-}
-
 int main() {
 
     string s1;

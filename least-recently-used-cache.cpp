@@ -40,19 +40,41 @@ public:
             return -1;
         }
 
-        Node* n = map[key];
-        Node *t = n->prev;
-        t->next = n;
-        n->next->prev = t;
+        Node* c = map[key];
+        Node *p = c->prev;
+        Node *n = c->next;
 
-        n->next = this->head->next;
-        n->prev = this->head;
-        this->head->next = n;
+        p->next = n;
+        n->prev = p;
 
-        return n->val;
+        c->next = nullptr;
+        c->prev = nullptr;
+
+        Node* head_next = this->head->next;
+        c->next = head_next;
+        c->prev = this->head;
+        head_next->prev = c;
+        this->head->next = c;
+
+        return c->val;
     }
 
     void put(int key, int val) {
+
+        if(this->map.find(key) != this->map.end()) {
+            Node *c = map[key];
+            Node *p = c->prev;
+            Node *n = c->next;
+
+            p->next = n;
+            n->prev = p;
+
+            this->map.erase(c->key);
+            delete c;
+            this->remaining++;
+        }
+
+
         if(this->remaining == 0) {
             Node *n = this->tail->prev;
             Node *t = n->prev;
@@ -80,16 +102,13 @@ public:
 int main() {
 
     LRUCache* l = new LRUCache(2);
-    l->put(1, 1);
-    l->put(2, 2);
-    l->get(1);
-    l->put(3, 3);
-    l->get(2);
-    l->put(4, 4);
-    l->get(1);
-    l->get(3);
-    l->get(4);
-
+    cout << l->get(2) << endl;
+    l->put(2, 6);
+    cout << l->get(1) << endl;
+    l->put(1, 5);
+    l->put(1, 2);
+    cout << l->get(1) << endl;
+    cout << l->get(2) << endl;
 
     return 0;
 }
